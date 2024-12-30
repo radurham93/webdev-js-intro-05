@@ -8,8 +8,9 @@ const todos = [
     "Rake the leaves",
 ];
 
-// Declare your two immutable variables
-
+// Declare your two mutable variables
+let shiftValue;
+let popValue;
 
 // Declaring constant variables to store references to the elements
 // that will be updated by your code.
@@ -22,42 +23,55 @@ const answerSixEl = document.getElementById("answer-six");
 const submissionBtn = document.getElementById("submission-btn");
 
 function updateAnswerOne() {
-    
+    answerOneEl.innerText = todos.join();
 }
 
 function updateAnswerTwo() {
-
+    answerTwoEl.innerText = todos[2];
 }
 
-function removeLastValue() {
 
+
+function removeLastValue() {
+    
+    popValue = todos.pop();
 }
 
 function removeFirstValue() {
-
+   shiftValue = todos.shift();
 }
 
 function addShiftAndPopValues() {
-
+    todos.push(popValue);
+    todos.push(shiftValue);
 }
 
 function updateAnswerFour() {
-
+    answerFourEl.innerText = todos.join();
 }
 
 function reverseTodoList() {
-
+todos.reverse();
 }
 
 function updateAnswerFive() {
-
+    answerFiveEl.innerText = todos.join();
 }
 
 function updateAnswerSix() {
-
+    answerSixEl.innerText = todos.join();
 }
 
 function render() {
+    updateAnswerOne();
+    updateAnswerTwo();
+    removeLastValue();
+    updateAnswerFour();
+    reverseTodoList();
+    updateAnswerFive();
+    removeFirstValue();
+    addShiftAndPopValues();
+    updateAnswerSix();
 
 }
 
