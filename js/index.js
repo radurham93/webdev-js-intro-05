@@ -1,7 +1,7 @@
 // Prevent us from attempting to use variables
 // that are not declared
 "use strict"
-
+/*
 let zooAnimals = ["Gorilla", "Giraffe", "Tiger", "Monkey"];
 
 console.log(zooAnimals); /*(4) ['Gorilla', 'Giraffe', 'Tiger', 'Monkey']
